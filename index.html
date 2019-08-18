@@ -1,0 +1,316 @@
+<html>
+<head>
+<title>
+Magic Square Generator || Generator Magic Square with your Birth Date.
+</title>
+<script>
+//Magic Square Generator Made by Shiviam Singla || Powered By ShiviamSingla.in
+//contact me: http://shiviamsingla.in/contact
+function result(){
+	var dd = document.getElementById('date').value;
+	dd = Math.floor(dd);
+	var mm = document.getElementById('month').value;
+	var year = document.getElementById('year').value;
+	var yy = Math.floor(year/100);
+	var YY = year%100;
+	document.getElementById('first').innerHTML = ('0'+dd).slice(-2);
+	document.getElementById('second').innerHTML = ('0'+mm).slice(-2);
+	document.getElementById('third').innerHTML = ('0'+yy).slice(-2);
+	document.getElementById('fourth').innerHTML = ('0'+YY).slice(-2);
+	document.getElementById('fifth').innerHTML = ('0'+(YY+1)).slice(-2);
+	document.getElementById('sixth').innerHTML = ('0'+(yy-1)).slice(-2);
+	document.getElementById('seventh').innerHTML = ('0'+(mm-3)).slice(-2);
+	document.getElementById('eighth').innerHTML = ('0'+(dd+3)).slice(-2);
+	document.getElementById('ninth').innerHTML = ('0'+(mm-2)).slice(-2);
+	document.getElementById('tenth').innerHTML = ('0'+(dd+2)).slice(-2);
+	document.getElementById('eleventh').innerHTML = ('0'+(YY+2)).slice(-2);
+	document.getElementById('twelevth').innerHTML = ('0'+(yy-2)).slice(-2);
+	document.getElementById('thirtheenth').innerHTML = ('0'+(yy+1)).slice(-2);
+	document.getElementById('fourteenth').innerHTML = ('0'+(YY-1)).slice(-2);
+	document.getElementById('fifteenth').innerHTML = ('0'+(dd+1)).slice(-2);
+	document.getElementById('sixteenth').innerHTML = ('0'+(mm-1)).slice(-2);
+	document.getElementById('result').style.display = "block";
+}
+</script>
+</head>
+<body>
+<style>
+*{
+margin:0px;
+padding:0px;
+}
+header{
+width:100%;
+height:10vh;
+padding-top:10px;
+padding-bottom:10px;
+background:rgb(0,0,200);
+position:fixed;
+}
+header h1{
+font-size:4vh;
+text-align:center;
+color:yellow;
+}
+.fake-header{
+	width:100%;
+	height:10vh;
+}
+img#banner{
+	width:90%;
+	height:auto;
+	margin-left:5%;
+	margin-top:5%;
+	box-shadow:4px 4px 4px black;
+}
+.intro{
+	width:90%;
+	height:auto;
+	margin-left:5%;
+	background:white;
+	padding-top:15px;
+	padding-bottom:10px;
+}
+.intro p{
+	font-size:3vh;
+	text-align:justify;
+	color:black;
+}
+.intro p a{
+	color:rgb(0,0,255);
+}
+.select-dob{
+	width:88%;
+	height:auto;
+	margin-left:5%;
+	background:rgb(0,0,180);
+	padding-top:3%;
+	padding-bottom:3%;
+}
+.select-dob label{
+	color:white;
+}
+.select-dob label{
+	margin-left:4%;
+	margin-right:4%;
+}
+.select-dob label select{
+	width:18%;
+	height:5vh;
+}
+.select-dob button{
+	height:10vh;
+	width:90%;
+	margin-top:3%;
+	margin-left:5%;
+	background:white;
+	border:none;
+	cursor:pointer;
+	border-radius:30px;
+	font-size:4vh;
+	color:rgb(0,0,180);
+}
+.select-dob button:hover{
+	background:none;
+	border:1px solid white;
+	color:white;
+}
+.result{
+	width:90%;
+	margin-top:3%;
+	margin-left:5%;
+	height:auto;
+	background:white;
+	display:none;
+}
+.result table{
+width:100%;
+height:auto;
+font-size:30px;
+color:rgb(0,0,180);
+text-align:center;
+border:1px solid rgb(0,0,180);
+border-radius:10px;
+padding:1%;
+}
+.result table tr td{
+	border:1px solid rgb(0,0,180);
+}
+footer{
+	width:100%;
+	height:auto;
+	font-size:3vh;
+	text-align:center;
+	background:rgba(0,0,180);
+	margin-top:3%;
+	color:white;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+footer a{
+	text-decoration:none;
+	outline:none;
+	color:white;
+}
+@media screen and (max-width:700px){
+	.select-dob label select{
+		width:90%;
+		margin-left:5%;
+		margin-bottom:10px;
+	}
+	header{
+		height:15vh;
+	}
+	.fake-header{
+		height:15vh;
+	}
+	img#banner{
+		margin-top:8%;
+	}
+}
+</style>
+<header>
+<h1>Magic Square Generator || Generator Magic Square with your Birth Date.</h1>
+</header><div class="fake-header"></div>
+<img src="http://www.shiviamsingla.in/wp-content/uploads/2019/06/magic-square3.jpg" id="banner"></img>
+<div class="intro">
+<p>Do you Know what a Magic Square is??? There are many types of magic squares But Using this website you can generate a magic square with your Date of Birth (DOB). The sum of this square from all sides and dimension's will same. First DOB Magic square is made by Famous Mathematician Shri Niwasa Ramanujana. Let know about Ramanujana's Magic square by Click <a href="http://www.shiviamsingla.in/magic-square-by-shri-nivasa-ramanujan/">Here</a></p>
+</div>
+<div class="select-dob">
+<label>Date:
+<select id="date">
+<option>01</option>
+<option>02</option>
+<option>03</option>
+<option>04</option>
+<option>05</option>
+<option>06</option>
+<option>07</option>
+<option>08</option>
+<option>09</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+<option>13</option>
+<option>14</option>
+<option>15</option>
+<option>16</option>
+<option>17</option>
+<option>18</option> 
+<option>19</option>
+<option>20</option>
+<option>21</option>
+<option>22</option>
+<option>23</option>
+<option>24</option>
+<option>25</option>
+<option>26</option>
+<option>27</option>
+<option>28</option>
+<option>29</option>
+<option>30</option>
+<option>31</option>
+</select>
+</label>
+<label>Month:
+<select id="month">
+<option value="01">January</option>
+<option value="02">February</option>
+<option value="03">March</option>
+<option value="04">April</option>
+<option value="05">May</option>
+<option value="06">Jun</option>
+<option value="07">July</option>
+<option value="08">August</option>
+<option value="09">September</option>
+<option value="10">October</option>
+<option value="11">November</option>
+<option value="12">December</option>
+</select>
+</label>
+<label>Year:
+<select id="year">
+<option>1975</option>
+<option>1976</option>
+<option>1977</option>
+<option>1978</option>
+<option>1979</option>
+<option>1980</option>
+<option>1981</option>
+<option>1982</option>
+<option>1983</option>
+<option>1984</option>
+<option>1985</option>
+<option>1986</option>
+<option>1987</option>
+<option>1988</option>
+<option>1989</option>
+<option>1990</option>
+<option>1991</option>
+<option>1992</option>
+<option>1993</option>
+<option>1994</option>
+<option>1995</option>
+<option>1996</option>
+<option>1997</option>
+<option>1998</option>
+<option>1999</option>
+<option>2000</option>
+<option>2001</option>
+<option>2002</option>
+<option>2003</option>
+<option>2004</option>
+<option>2005</option>
+<option>2006</option>
+<option>2007</option>
+<option>2008</option>
+<option>2009</option>
+<option>2010</option>
+<option>2011</option>
+<option>2012</option>
+<option>2013</option>
+<option>2014</option>
+<option>2015</option>
+<option>2016</option>
+<option>2017</option>
+<option>2018</option>
+<option>2019</option>
+</select>
+</label>
+<label>
+<button onclick="result();">Generate Magic Square</button>
+<label>
+</div>
+<div class="result" id="result">
+<table>
+<tr>
+<td id="first" style="background:yellow;border-top-left-radius:10px;"></td>
+<td id="second" style="background:yellow;"></td>
+<td id="third" style="background:yellow;"></td>
+<td id="fourth" style="background:yellow;border-top-right-radius:10px;"></td>
+</tr>
+<tr>
+<td id="fifth"></td>
+<td id="sixth"></td>
+<td id="seventh"></td>
+<td id="eighth"></td>
+</tr>
+<tr>
+<td id="ninth"></td>
+<td id="tenth"></td>
+<td id="eleventh"></td>
+<td id="twelevth"></td>
+</tr>
+<tr>
+<td id="thirtheenth" style="border-bottom-left-radius:10px;"></td>
+<td id="fourteenth"></td>
+<td id="fifteenth"></td>
+<td id="sixteenth" style="border-bottom-right-radius:10px;"></td>
+</tr>
+</table>
+</div>
+<footer>
+Powered By <a href="http://shiviamsingla.in/">ShiviamSingla.in</a>
+</footer>
+</body>
+</html>
